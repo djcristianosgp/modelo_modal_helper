@@ -66,7 +66,7 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
     <!-- Botão para abrir o modal de exemplo -->
-    <button id="open-modal-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+    <button id="open-modal-btn" class="bg-[#354889] hover:bg-[#2c3e7a] text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
         Abrir Modal de Ajuda
     </button>
 
@@ -74,9 +74,13 @@
     <dialog id="help-modal-dialog"
         class="p-0 rounded-xl shadow-2xl w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-hidden">
         <div class="flex flex-col h-full bg-white">
-            <!-- Header do Modal -->
-            <div class="px-6 py-4 bg-blue-600 text-white rounded-t-xl flex items-center justify-between">
-                <h2 class="text-2xl font-bold">Help Cadastro do Indivíduo</h2>
+            <!-- Header do Modal com a logo da empresa -->
+            <div class="px-6 py-4 bg-[#354889] text-white rounded-t-xl flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <!-- Logo da empresa sem bordas arredondadas -->
+                    <img src="https://img-cdi.tytotech.com.br/rg-system/secao/37896d4f-59a1-4291-ab6e-9fc8bec06657.webp" alt="Logo da Empresa" class="h-10">
+                    <h2 class="text-2xl font-bold">Help Cadastro do Indivíduo</h2>
+                </div>
             </div>
 
             <!-- Navegação por Guias -->
@@ -236,36 +240,36 @@
                     <div class="space-y-4 text-gray-800 max-h-[60vh] overflow-y-auto p-4 bg-gray-100 rounded-lg">
                         <!-- Item de Atualização 1 -->
                         <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                            <p class="text-sm font-semibold text-blue-600">01/08/2024</p>
+                            <p class="text-sm font-semibold text-[#354889]">01/08/2024</p>
                             <h4 class="text-lg font-bold mt-1">Nova Funcionalidade: Anexos</h4>
                             <p class="mt-2 text-gray-700">Agora é possível anexar documentos (PDF, JPG) diretamente ao
                                 cadastro do indivíduo. Um novo ícone de clipe foi adicionado na seção "Documentos".</p>
                         </div>
                         <!-- Item de Atualização 2 -->
                         <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                            <p class="text-sm font-semibold text-blue-600">15/07/2024</p>
+                            <p class="text-sm font-semibold text-[#354889]">15/07/2024</p>
                             <h4 class="text-lg font-bold mt-1">Melhoria de Performance</h4>
                             <p class="mt-2 text-gray-700">O tempo de carregamento da tela foi reduzido em 30%,
                                 proporcionando uma experiência mais fluida e rápida para todos os usuários.</p>
                         </div>
                         <!-- Item de Atualização 3 -->
                         <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                            <p class="text-sm font-semibold text-blue-600">01/07/2024</p>
+                            <p class="text-sm font-semibold text-[#354889]">01/07/2024</p>
                             <h4 class="text-lg font-bold mt-1">Lançamento Inicial</h4>
                             <p class="mt-2 text-gray-700">Lançamento oficial da tela de "Cadastro do Indivíduo" com
                                 funcionalidades básicas de preenchimento e salvamento.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Nova Guia: Feedback & Sugestões -->
                 <div id="feedback" class="tab-content hidden">
                     <div class="max-h-[60vh] overflow-y-auto p-4 space-y-6 bg-gray-100 rounded-lg">
                         <div class="bg-white p-6 rounded-lg shadow-md">
                             <h3 class="text-xl font-bold mb-4 text-gray-800">Envie seu Feedback e Sugestões</h3>
                             <form id="feedback-form" class="space-y-4">
-                                <textarea id="feedback-input" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none" rows="4" placeholder="Escreva sua sugestão aqui..."></textarea>
-                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+                                <textarea id="feedback-input" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#354889] focus:border-[#354889] transition-colors duration-200 resize-none" rows="4" placeholder="Escreva sua sugestão aqui..."></textarea>
+                                <button type="submit" class="w-full bg-[#354889] hover:bg-[#2c3e7a] text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
                                     Enviar Sugestão
                                 </button>
                             </form>
@@ -282,8 +286,8 @@
 
             </div>
 
-            <!-- Footer do Modal -->
-            <div class="px-6 py-4 bg-gray-50 border-t border-gray-200 rounded-b-xl flex justify-end">
+            <!-- Footer do Modal ajustado para exibir o botão "Fechar" corretamente -->
+            <div class="px-6 py-5 bg-gray-50 border-t border-gray-200 rounded-b-xl flex justify-end">
                 <button id="close-modal-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-200">
                     Fechar
                 </button>
@@ -291,8 +295,10 @@
         </div>
     </dialog>
 
-    <!-- Rodapé fixo na parte inferior da página, com estilo consistente -->
-    <div class="fixed bottom-0 left-0 w-full bg-blue-600 text-white p-4 text-center shadow-lg z-50">
+    <!-- Rodapé fixo na parte inferior da página com a logo da empresa e a cor correta -->
+    <div class="fixed bottom-0 left-0 w-full bg-[#354889] text-white p-4 text-center shadow-lg z-50 flex justify-center items-center space-x-4">
+        <!-- Logo da empresa sem bordas arredondadas -->
+        <img src="https://img-cdi.tytotech.com.br/rg-system/secao/37896d4f-59a1-4291-ab6e-9fc8bec06657.webp" alt="Logo da Empresa" class="h-8">
         <h2 class="text-xl font-bold">Modelo Desenvolvido por Cristiano Grobério</h2>
     </div>
 
@@ -336,7 +342,7 @@
             function showTab(tabId) {
                 // Remove a classe de ativo de todos os botões e conteúdos
                 tabButtons.forEach(btn => {
-                    btn.classList.remove('border-blue-600', 'text-blue-600');
+                    btn.classList.remove('border-[#354889]', 'text-[#354889]');
                     btn.classList.add('border-transparent');
                 });
                 tabContents.forEach(content => {
@@ -348,11 +354,11 @@
                 const selectedTabContent = document.getElementById(tabId);
 
                 if (selectedTabButton && selectedTabContent) {
-                    selectedTabButton.classList.add('border-blue-600', 'text-blue-600');
+                    selectedTabButton.classList.add('border-[#354889]', 'text-[#354889]');
                     selectedTabButton.classList.remove('border-transparent');
                     selectedTabContent.classList.remove('hidden');
                 }
-                
+
                 // Se a guia de feedback for selecionada, renderiza as sugestões
                 if (tabId === 'feedback') {
                     renderSuggestions();
@@ -415,7 +421,7 @@
             suggestionsList.addEventListener('click', (e) => {
                 const target = e.target.closest('button');
                 if (!target) return;
-                
+
                 const id = parseInt(target.getAttribute('data-id'));
                 const suggestion = suggestions.find(s => s.id === id);
 
