@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal de Ajuda</title>
+    <!-- Inclui o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Estilo para a barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e5e7eb;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+
+        /* Estiliza o backdrop do modal (fundo escurecido) */
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estiliza o modal quando ele está aberto */
+        dialog[open] {
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        /* Adiciona uma animação simples */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <!-- Botão para abrir o modal de exemplo -->
+    <button id="open-modal-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+        Abrir Modal de Ajuda
+    </button>
+
+    <!-- Modal Dialog -->
+    <dialog id="help-modal-dialog" class="p-0 rounded-xl shadow-2xl w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-hidden">
+        <div class="flex flex-col h-full bg-white">
+            <!-- Header do Modal -->
+            <div class="px-6 py-4 bg-blue-600 text-white rounded-t-xl flex items-center justify-between">
+                <h2 class="text-2xl font-bold">Help Cadastro do Indivíduo</h2>
+            </div>
+
+            <!-- Navegação por Guias -->
+            <div class="flex flex-col sm:flex-row border-b border-gray-200 bg-gray-50">
+                <button class="tab-button flex-1 py-3 px-4 text-sm font-medium text-center text-gray-700 border-b-2 border-transparent transition-colors duration-200 hover:bg-gray-200 focus:outline-none" data-tab="videos">
+                    Vídeos
+                </button>
+                <button class="tab-button flex-1 py-3 px-4 text-sm font-medium text-center text-gray-700 border-b-2 border-transparent transition-colors duration-200 hover:bg-gray-200 focus:outline-none" data-tab="audio">
+                    Áudios
+                </button>
+                <button class="tab-button flex-1 py-3 px-4 text-sm font-medium text-center text-gray-700 border-b-2 border-transparent transition-colors duration-200 hover:bg-gray-200 focus:outline-none" data-tab="manual">
+                    Manual
+                </button>
+                <button class="tab-button flex-1 py-3 px-4 text-sm font-medium text-center text-gray-700 border-b-2 border-transparent transition-colors duration-200 hover:bg-gray-200 focus:outline-none" data-tab="updates">
+                    Atualizações
+                </button>
+            </div>
+
+            <!-- Conteúdo das Guias -->
+            <div class="p-6 flex-1 overflow-y-auto">
+                
+                <!-- Guia 1: Vídeos -->
+                <div id="videos" class="tab-content">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card de Vídeo 1 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Introdução ao Cadastro</h3>
+                            <div class="aspect-w-16 aspect-h-9 w-full">
+                                <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <!-- Card de Vídeo 2 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Detalhes do Formulário</h3>
+                            <div class="aspect-w-16 aspect-h-9 w-full">
+                                <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <!-- Card de Vídeo 3 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Salvando e Editando Dados</h3>
+                            <div class="aspect-w-16 aspect-h-9 w-full">
+                                <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <!-- Card de Vídeo 4 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Perguntas Frequentes</h3>
+                            <div class="aspect-w-16 aspect-h-9 w-full">
+                                <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                         <!-- Card de Vídeo 5 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
+                            <h3 class="text-lg font-semibold mb-2 text-gray-800">Perguntas Frequentes</h3>
+                            <div class="aspect-w-16 aspect-h-9 w-full">
+                                <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guia 2: Áudios -->
+                <div id="audio" class="tab-content hidden">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md max-h-96 overflow-y-auto space-y-4">
+                        <!-- Mensagem Recebida (Esquerda) -->
+                        <div class="flex justify-start">
+                            <div class="bg-white p-3 rounded-lg max-w-sm shadow-sm">
+                                <p class="text-sm text-gray-800 mb-2">Introdução rápida ao módulo de cadastro:</p>
+                                <audio controls class="w-full">
+                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                                    Seu navegador não suporta o elemento de áudio.
+                                </audio>
+                            </div>
+                        </div>
+                        <!-- Mensagem Enviada (Direita) -->
+                        <div class="flex justify-end">
+                            <div class="bg-green-100 p-3 rounded-lg max-w-sm shadow-sm">
+                                <p class="text-sm text-gray-800 mb-2">Entendido. E como faço para adicionar um novo indivíduo?</p>
+                                <audio controls class="w-full">
+                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                                    Seu navegador não suporta o elemento de áudio.
+                                </audio>
+                            </div>
+                        </div>
+                        <!-- Mensagem Recebida (Esquerda) -->
+                        <div class="flex justify-start">
+                            <div class="bg-white p-3 rounded-lg max-w-sm shadow-sm">
+                                <p class="text-sm text-gray-800 mb-2">O passo a passo para preencher o formulário inicial:</p>
+                                <audio controls class="w-full">
+                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                                    Seu navegador não suporta o elemento de áudio.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guia 3: Manual -->
+                <div id="manual" class="tab-content hidden">
+                    <div class="prose max-w-none text-gray-800">
+                        <h3 class="text-xl font-bold mb-2">Manual de Cadastro do Indivíduo</h3>
+                        <p class="mb-4">Este manual detalha o processo de cadastro de um novo indivíduo no sistema. Siga os passos abaixo para garantir que todas as informações sejam inseridas corretamente.</p>
+                        
+                        <h4 class="text-lg font-semibold mt-6 mb-2">1. Acessando a Tela</h4>
+                        <p class="mb-4">No menu principal, navegue até "Cadastros" e selecione "Indivíduo". A tela de cadastro será exibida com campos vazios para preenchimento.</p>
+                        
+                        <h4 class="text-lg font-semibold mt-6 mb-2">2. Preenchimento do Formulário</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Dados Pessoais:</strong> Preencha nome completo, CPF, data de nascimento e gênero.</li>
+                            <li><strong>Endereço:</strong> Informe o CEP e clique em "Buscar" para preencher automaticamente o endereço.</li>
+                            <li><strong>Informações de Contato:</strong> Adicione pelo menos um telefone e um e-mail válido.</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-semibold mt-6 mb-2">3. Salvando e Concluindo</h4>
+                        <p>Após preencher todos os campos obrigatórios, clique no botão "Salvar" no canto inferior direito da tela. Uma mensagem de confirmação será exibida. Caso ocorra algum erro, verifique os campos destacados em vermelho.</p>
+                    </div>
+                </div>
+
+                <!-- Guia 4: Atualizações -->
+                <div id="updates" class="tab-content hidden">
+                    <div class="space-y-4 text-gray-800">
+                        <!-- Item de Atualização 1 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <p class="text-sm font-semibold text-blue-600">01/08/2024</p>
+                            <h4 class="text-lg font-bold mt-1">Nova Funcionalidade: Anexos</h4>
+                            <p class="mt-2 text-gray-700">Agora é possível anexar documentos (PDF, JPG) diretamente ao cadastro do indivíduo. Um novo ícone de clipe foi adicionado na seção "Documentos".</p>
+                        </div>
+                        <!-- Item de Atualização 2 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <p class="text-sm font-semibold text-blue-600">15/07/2024</p>
+                            <h4 class="text-lg font-bold mt-1">Melhoria de Performance</h4>
+                            <p class="mt-2 text-gray-700">O tempo de carregamento da tela foi reduzido em 30%, proporcionando uma experiência mais fluida e rápida para todos os usuários.</p>
+                        </div>
+                        <!-- Item de Atualização 3 -->
+                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                            <p class="text-sm font-semibold text-blue-600">01/07/2024</p>
+                            <h4 class="text-lg font-bold mt-1">Lançamento Inicial</h4>
+                            <p class="mt-2 text-gray-700">Lançamento oficial da tela de "Cadastro do Indivíduo" com funcionalidades básicas de preenchimento e salvamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer do Modal -->
+            <div class="px-6 py-4 bg-gray-50 border-t border-gray-200 rounded-b-xl flex justify-end">
+                <button id="close-modal-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-200">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('help-modal-dialog');
+            const openModalBtn = document.getElementById('open-modal-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // Função para abrir o modal
+            openModalBtn.addEventListener('click', () => {
+                modal.showModal();
+                // Ativa a primeira guia por padrão
+                showTab('videos');
+            });
+
+            // Função para fechar o modal
+            closeModalBtn.addEventListener('click', () => {
+                modal.close();
+            });
+
+            // Função para alternar entre as guias
+            function showTab(tabId) {
+                // Remove a classe de ativo de todos os botões e conteúdos
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('border-blue-600', 'text-blue-600');
+                    btn.classList.add('border-transparent');
+                });
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                // Adiciona a classe de ativo ao botão e conteúdo selecionados
+                const selectedTabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+                const selectedTabContent = document.getElementById(tabId);
+                
+                if (selectedTabButton && selectedTabContent) {
+                    selectedTabButton.classList.add('border-blue-600', 'text-blue-600');
+                    selectedTabButton.classList.remove('border-transparent');
+                    selectedTabContent.classList.remove('hidden');
+                }
+            }
+
+            // Adiciona o evento de clique aos botões das guias
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+                    showTab(tabId);
+                });
+            });
+
+            // Inicia com a primeira guia visível
+            showTab('videos');
+        });
+    </script>
+</body>
+</html>
