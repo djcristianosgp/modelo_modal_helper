@@ -46,4 +46,4 @@ Esse projeto é um modelo de modal de ajuda criado com **HTML, Tailwind CSS e Ja
 
 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone [https://github.com/seu-usuario/seu-repo.git](https://github.com/djcristianosgp/modelo_modal_helper.git)
