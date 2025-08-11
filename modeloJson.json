@@ -1,0 +1,89 @@
+[
+	{
+		"metodoget": "https://service-notification.rgsystem.com.br/api/v1/help?tela=cadindividuo",
+		"data": [
+			{
+				"videos": [
+					{
+						"titulo": "Introdução ao cadastro",
+						"urlvideo": "https://youtu.be/dQw4w9WgXcQ"
+					},
+					{
+						"titulo": "Detalhes do formulário",
+						"urlvideo": "https://youtu.be/dQw4w9WgXcQ"
+					},
+					{
+						"titulo": "Salvando e editando dados",
+						"urlvideo": "https://youtu.be/dQw4w9WgXcQ"
+					}
+				],
+				"audio": [
+					{
+						"titulo": "Introdução rápida ao módulo de cadastro:",
+						"urlaudio": "https://youtu.be/dQw4w9WgXcQ"
+					},
+					{
+						"titulo": "Entendido. E como faço para adicionar um novo indivíduo?",
+						"urlaudio": "https://youtu.be/dQw4w9WgXcQ"
+					},
+					{
+						"titulo": "O passo a passo para preencher o formulário inicial:",
+						"urlaudio": "https://youtu.be/dQw4w9WgXcQ"
+					}
+				],
+				"manual": [
+					{
+						"titulo": "Manual de Cadastro do Indivíduo",
+						"topicos": [
+							{
+								"topico": "Titulo topico",
+								"texto": "Texto topico"
+							},
+							{
+								"topico": "Titulo topico",
+								"texto": "Texto topico"
+							},
+							{
+								"topico": "Titulo topico",
+								"texto": "Texto topico"
+							}
+						]
+					}
+				],
+				"atualizacoes": [
+					{
+						"titulo": "Manual de Cadastro do Indivíduo",
+						"data": "01/05/2025",
+						"descricao": "descrição atualizaçao"
+					},
+					{
+						"titulo": "Manual de Cadastro do Indivíduo",
+						"data": "01/05/2025",
+						"descricao": "descrição atualizaçao"
+					},
+					{
+						"titulo": "Manual de Cadastro do Indivíduo",
+						"data": "01/05/2025",
+						"descricao": "descrição atualizaçao"
+					}
+				],
+				"feedback": [
+					{
+						"titulo": "Adicionar um modo escuro à tela de cadastro",
+						"data": "01/05/2025",
+						"descricao": "descrição atualizaçao",
+						"votosPositivos": 10,
+						"votosNegativos": 5
+					},
+					{
+						"titulo": "Adicionar um modo escuro à tela de cadastro",
+						"data": "01/05/2025",
+						"descricao": "descrição atualizaçao",
+						"votosPositivos": 10,
+						"votosNegativos": 5
+					}
+				]
+			}
+		]
+	}
+]
