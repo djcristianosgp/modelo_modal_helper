@@ -27,11 +27,6 @@ Esse projeto é um modelo de modal de ajuda criado com **HTML, Tailwind CSS e Ja
 
 ---
 
-## 👀 Preview
-
-![preview do modal](https://img-cdi.tytotech.com.br/rg-system/secao/37896d4f-59a1-4291-ab6e-9fc8bec06657.webp)
-
----
 
 ## 🧱 Tecnologias Utilizadas
 
